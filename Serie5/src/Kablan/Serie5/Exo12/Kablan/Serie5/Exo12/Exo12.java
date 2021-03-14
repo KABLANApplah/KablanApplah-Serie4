@@ -20,10 +20,6 @@ public class Exo12 {
 			{
 				
 				int length = s.length(); 
-				/*if(map.containsKey(length))
-				{List<String> value = map.get(length); value.add(s); }
-				else{List<String> list = new ArrayList<>();  list.add(s); map.put(length, list); }*/
-				
 				map1.computeIfAbsent(length,key -> new ArrayList<>()).add(s); 
 				
 			}
@@ -71,8 +67,5 @@ public class Exo12 {
 			
 		}
 	}
-
-
-	// s-> s.lenght === String :: length 
 
 
