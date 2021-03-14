@@ -64,6 +64,7 @@ public class Exo_14 {
 				System.out.println(" \n");
 				
 				 //Question7 
+		
 				Comparator <String> comparator = (String s1, String s2) -> Integer.compare(s1.length(), s2.length()); 
 				Optional<String> motPlusLong = words.stream().collect(Collectors.maxBy(comparator)); 	
 				OptionalInt tailleLong=	words.stream().mapToInt(mot -> mot.length()).max(); 		
@@ -92,7 +93,8 @@ public class Exo_14 {
 				System.out.print("map : \n"+map);
 				System.out.println(" \n");
 				
-				System.out.println("  Question11 ");
+				//Question11
+		
 				Function<String, String> started = s -> s.substring(0,1); 
 				
 				Map<String, List<String>> map1 = words.stream().collect(Collectors.groupingBy(started)); 
