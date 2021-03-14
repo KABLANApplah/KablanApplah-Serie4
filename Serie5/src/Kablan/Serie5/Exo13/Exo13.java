@@ -15,23 +15,27 @@ public class Exo13 {
 		{
 			List <String> words = Arrays.asList("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve");
 			
-			System.out.println("*********Question 1 ********** \n");
+			//Question 1 
+			
 			words.forEach(mot -> System.out.println(mot));
 			System.out.println("\n");
 			
-			System.out.println("***********Question 2************ \n");
+			//Question 2
+			
 			List <String> words3 = new ArrayList<>(words);  
 			words3.removeIf(s->s.length()!=3); 
 			words3.forEach(mot -> System.out.println(mot));
 			System.out.println("\n");
 			
-			System.out.println("***********Question 3************ \n");
+			//Question 3
+			
 			Comparator <String> comparator = (String s1, String s2) -> Integer.compare(s1.length(), s2.length());  
 			words3.sort(comparator);
 			words3.forEach(mot -> System.out.println(mot));
 			System.out.println("\n");
 			
-			System.out.println("**************Question 4 ***************\n");
+			//Question 4 
+			
 			Comparator <String> cmp = (String s1, String s2)->
 			{
 				if(s1.length() == s2.length())
@@ -47,29 +51,29 @@ public class Exo13 {
 			words.forEach(mot -> System.out.println(mot));
 			System.out.println("\n");
 			
-			System.out.println("*************Question 5************ \n");
+			//Question 5
 			
 			IntStream result = words.stream().mapToInt(s -> s.length()); 
 			System.out.println("la moyenne est : "+result.average().getAsDouble());
 			System.out.println("\n");
 			
-			System.out.println("*************Question 6 **********\n");
+			//Question 6 
 			
-			System.out.println("les lettre utilisées dans ce stream");
+			System.out.println("les lettre utilisÃ©es dans ce stream");
 			Stream<Character> nbrElemUse = words.stream().flatMap(s -> s.chars().mapToObj(letter ->(char)letter)); 
 			nbrElemUse.forEach(s -> System.out.print("\t"+s));
-			System.out.println("\n le nombre de lettre utilisées dans ce stream");
+			System.out.println("\n le nombre de lettre utilisÃ©es dans ce stream");
 			
 			Stream<Character> nbrElemStream1 =  words.stream().flatMap(s->s.chars().mapToObj(letter ->(char)letter));
 
 			double nbrLetters = nbrElemStream1.count(); 
-			System.out.println("le total des lettres utilisé :"+nbrLetters);
+			System.out.println("le total des lettres utilisÃ© :"+nbrLetters);
 			
 			System.out.println("le nombre d'element diffenrente:");
 			Stream<Character> nbrElemStream2 =  words.stream().flatMap(s->s.chars().mapToObj(letter ->(char)letter)).distinct();
 
 			double nbrLettersD = nbrElemStream2.count();
-			System.out.println("le total des lettres utilisé :"+nbrLettersD);
+			System.out.println("le total des lettres utilisÃ© :"+nbrLettersD);
 			
 			Stream<Character> nbrElemStream3 =  words.stream().flatMap(s->s.chars().mapToObj(letter ->(char)letter)).distinct();
 			
