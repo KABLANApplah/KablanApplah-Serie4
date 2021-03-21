@@ -2,6 +2,17 @@ package Kablan.Serie4.Eo9;
 
 import java.util.function.Predicate;
 
+/*une interface fonctionelle c'est une interface qui n'a qu'une seule methode abstrait*/
+
+/*List<String> strings = Arrays.asList("one","two"); 
+
+Iterable<String> iterable = ()-> strings.iterator(); 
+
+iterable.forEach((String s) -> { System.out.println(s.toUpperCase());});*/
+
+
+
+
 public class Exo9 {
 	
 		public  static void main(String[] args)
@@ -34,12 +45,4 @@ public class Exo9 {
 	}
 
 
-	/*une interface fonctionelle c'est une interface qui n'a qu'une seule methode abstrait*/
-
-	/*List<String> strings = Arrays.asList("one","two"); 
-
-	Iterable<String> iterable = ()-> strings.iterator(); 
-
-	iterable.forEach((String s) -> { System.out.println(s.toUpperCase());});*/
-
-
+	
